@@ -41,16 +41,18 @@ function App() {
   }
 
   return (
-    <Router>
-      <>
-        <Navbar logo="TextUtils" changeMode={changeMode} mode={mode} btnText={btnText} />
-        <Alert alert={alert} />
-        <Routes>
-          <Route path="/about" element={<About mode={mode} />} />
-          <Route path="/" element={<Textarea mode={mode} showAlert={showAlert} />} />
-        </Routes>
-      </>
-    </Router>
+    <>
+      <Router>
+        <>
+          <Navbar logo="TextUtils" changeMode={changeMode} mode={mode} btnText={btnText} />
+          <Alert alert={alert} />
+          <Routes>
+            <Route path="/about" element={<About mode={mode} />} />
+            <Route path="TextUtils" element={<Textarea mode={mode} showAlert={showAlert} />} />
+          </Routes>
+        </>
+      </Router>
+    </>
   );
 }
 
